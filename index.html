@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neyora — Gizlilik Politikası / Privacy Policy</title>
+  <style>
+    :root {
+      --bg:      #0d0d14;
+      --surface: #16161f;
+      --border:  #2a2a3a;
+      --primary: #9b8fef;
+      --gold:    #c9a84c;
+      --text:    #e8e8f0;
+      --muted:   #8888a8;
+      --radius:  10px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      padding: 0 0 80px;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 28px 24px 20px;
+      text-align: center;
+    }
+
+    header .logo {
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    header h1 {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    header .updated {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* Language toggle */
+    .lang-bar {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 20px 24px 0;
+    }
+
+    .lang-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 7px 20px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.18s;
+    }
+
+    .lang-btn.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+    }
+
+    /* Content */
+    .content {
+      max-width: 720px;
+      margin: 32px auto 0;
+      padding: 0 24px;
+    }
+
+    .lang-block { display: none; }
+    .lang-block.visible { display: block; }
+
+    h2 {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 48px 0 16px;
+    }
+
+    h3 {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--text);
+      margin: 32px 0 10px;
+    }
+
+    p { color: #c8c8e0; margin-bottom: 14px; }
+
+    ul {
+      color: #c8c8e0;
+      padding-left: 20px;
+      margin-bottom: 14px;
+    }
+
+    li { margin-bottom: 6px; }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      margin: 16px 0;
+    }
+
+    .card-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .card p { margin: 0; font-size: 14px; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin: 14px 0;
+    }
+
+    th {
+      text-align: left;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 6px 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    td {
+      padding: 10px 10px;
+      border-bottom: 1px solid var(--border);
+      color: #c8c8e0;
+      vertical-align: top;
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    .pill {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--primary);
+      color: #fff;
+      white-space: nowrap;
+    }
+
+    .pill.no  { background: #3a3a4a; color: var(--muted); }
+
+    .disclaimer {
+      background: #1a1424;
+      border: 1px solid #3d2d6a;
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      margin: 20px 0;
+    }
+
+    .disclaimer .disclaimer-label {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .disclaimer p { font-size: 14px; color: #b8b0d8; margin: 0; }
+
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 48px 0 0;
+    }
+
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      margin-top: 16px;
+      text-align: center;
+    }
+
+    .contact-box .email {
+      font-size: 16px;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      table { font-size: 13px; }
+      td, th { padding: 8px 6px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">✦ Neyora</div>
+  <h1 id="header-title">Gizlilik Politikası</h1>
+  <div class="updated" id="header-updated">Son güncelleme: 11 Haziran 2026</div>
+</header>
+
+<div class="lang-bar">
+  <button class="lang-btn active" onclick="setLang('tr')" id="btn-tr">Türkçe</button>
+  <button class="lang-btn" onclick="setLang('en')" id="btn-en">English</button>
+</div>
+
+<div class="content">
+
+  <!-- ═══════════════════════════════════════ TURKISH ══════════════════════════════════════ -->
+  <div class="lang-block visible" id="block-tr">
+
+    <h2>Giriş</h2>
+    <p>
+      Neyora ("uygulama", "biz") olarak kişisel verilerinizi korumaya kararlıyız.
+      Bu Gizlilik Politikası, Neyora uygulamasını kullanırken hangi verileri topladığımızı,
+      bu verileri nasıl kullandığımızı ve haklarınızın neler olduğunu açıklar.
+    </p>
+    <p>
+      Bu politika, 6698 sayılı <strong>Kişisel Verilerin Korunması Kanunu (KVKK)</strong>
+      ve ilgili mevzuat kapsamında hazırlanmıştır.
+    </p>
+
+    <h2>Topladığımız Veriler</h2>
+
+    <h3>Hesap ve Profil Bilgileri</h3>
+    <table>
+      <tr><th>Veri Türü</th><th>Amaç</th><th>Üçüncü Taraf</th></tr>
+      <tr><td>E-posta adresi</td><td>Kimlik doğrulama</td><td>Firebase Auth (Google)</td></tr>
+      <tr><td>Ad</td><td>Kişiselleştirilmiş içerik</td><td>—</td></tr>
+      <tr><td>Doğum tarihi</td><td>Güneş burcu hesaplama</td><td>—</td></tr>
+      <tr><td>Doğum şehri</td><td>YZ rehberlik bağlamı</td><td>Google Gemini API</td></tr>
+      <tr><td>İlişki durumu</td><td>YZ içerik kişiselleştirme</td><td>Google Gemini API</td></tr>
+    </table>
+
+    <h3>Kullanım Verileri</h3>
+    <table>
+      <tr><th>Veri Türü</th><th>Amaç</th></tr>
+      <tr><td>Sohbet mesajları</td><td>YZ yanıtı üretme ve geçmiş görüntüleme</td></tr>
+      <tr><td>Günlük ruh hali seçimleri</td><td>Kişiselleştirilmiş günlük rehberlik</td></tr>
+      <tr><td>Uyum analizi raporları</td><td>Sonuçların saklanması ve görüntülenmesi</td></tr>
+      <tr><td>Günlük içgörüler</td><td>Tarih bazlı içerik yönetimi</td></tr>
+      <tr><td>Kullanım serisi (streak)</td><td>Motivasyon takibi</td></tr>
+    </table>
+
+    <h3>Abonelik Verileri</h3>
+    <p>
+      Premium abonelikler Apple App Store üzerinden işlenir. Kart veya ödeme bilgisi
+      Neyora'ya iletilmez. RevenueCat SDK'sı abonelik durumunuzu (aktif/pasif, plan türü)
+      yönetir; ödeme bilgilerinizi işlemez.
+    </p>
+
+    <div class="card">
+      <div class="card-title">Toplamadığımız Veriler</div>
+      <p>Konum (GPS), kamera/mikrofon, kişiler, fotoğraflar, sağlık verileri,
+      parmak izi / yüz verisi, reklam tanımlayıcısı (IDFA), tarama geçmişi.</p>
+    </div>
+
+    <h2>Verileri Nasıl Kullanıyoruz</h2>
+    <ul>
+      <li>Uygulamanın temel işlevlerini sağlamak (giriş, kişisel içerik, sohbet)</li>
+      <li>Günlük astroloji içgörüleri ve YZ rehberliği üretmek</li>
+      <li>Abonelik durumunu doğrulamak ve premium özelliklere erişim vermek</li>
+      <li>Uygulama performansını iyileştirmek</li>
+    </ul>
+    <p>Verilerinizi <strong>reklam amacıyla kullanmıyor</strong>, üçüncü taraflara
+    satmıyor ve ticari amaçlı paylaşmıyoruz.</p>
+
+    <h2>Üçüncü Taraf Hizmetler</h2>
+
+    <div class="card">
+      <div class="card-title">Firebase Authentication &amp; Cloud Firestore — Google LLC</div>
+      <p>Kimlik doğrulama ve veri depolama. Verileriniz Google'ın sunucularında
+      şifreli olarak saklanır. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Gizlilik Politikası ↗</a></p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Gemini API — Google LLC</div>
+      <p>Sohbet mesajlarınız ve profil bağlamınız (ad, burç, doğum şehri) YZ yanıtı
+      üretmek için Gemini API'ye gönderilir. Google'ın API Kullanım Koşullarına göre
+      bu veriler varsayılan olarak model eğitiminde kullanılmaz.
+      <a href="https://ai.google.dev/gemini-api/terms" target="_blank">Gemini API Koşulları ↗</a></p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">RevenueCat</div>
+      <p>Abonelik yönetimi. RevenueCat, abonelik durumunuzu (aktif/pasif, bitiş tarihi)
+      ve RevenueCat kullanıcı kimliğinizi işler. Ödeme bilgileri Apple tarafından yönetilir,
+      RevenueCat'e iletilmez.
+      <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Gizlilik Politikası ↗</a></p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Apple App Store</div>
+      <p>Satın alma işlemleri Apple'ın altyapısı üzerinden gerçekleşir.
+      <a href="https://www.apple.com/legal/privacy/tr/" target="_blank">Apple Gizlilik Politikası ↗</a></p>
+    </div>
+
+    <h2>Veri Saklama</h2>
+    <table>
+      <tr><th>Veri</th><th>Saklama Süresi</th></tr>
+      <tr><td>Hesap verileri</td><td>Hesap silinene kadar</td></tr>
+      <tr><td>Sohbet geçmişi</td><td>Hesap silinene kadar (son 30 mesaj görüntülenir)</td></tr>
+      <tr><td>Günlük ruh hali</td><td>Hesap silinene kadar</td></tr>
+      <tr><td>Uyum raporları</td><td>Hesap silinene kadar</td></tr>
+    </table>
+
+    <h2>Haklarınız (KVKK Madde 11)</h2>
+    <ul>
+      <li><strong>Erişim:</strong> Hakkınızda işlediğimiz verileri öğrenme hakkı</li>
+      <li><strong>Düzeltme:</strong> Yanlış veya eksik verilerin düzeltilmesini talep etme</li>
+      <li><strong>Silme:</strong> Uygulama içi Profil → Hesabı Sil ile hesabınızı ve verilerinizi silebilirsiniz</li>
+      <li><strong>İtiraz:</strong> Kişisel verilerinizin işlenmesine itiraz etme hakkı</li>
+      <li><strong>Şikayet:</strong> Kişisel Verileri Koruma Kurumu'na (KVKK) başvurma hakkı</li>
+    </ul>
+    <p>Talepleriniz için: <a href="mailto:destek@neyora.app">destek@neyora.app</a></p>
+
+    <h2>Çocukların Gizliliği</h2>
+    <p>Neyora, 13 yaşın altındaki çocuklara yönelik değildir. 13 yaş altı birinin veri
+    gönderdiğini fark edersek, ilgili verileri derhal sileriz.</p>
+
+    <h2>Yapay Zeka Uyarısı</h2>
+    <div class="disclaimer">
+      <div class="disclaimer-label">✦ Önemli Uyarı</div>
+      <p>
+        Neyora'da yer alan tüm içerikler yapay zeka tarafından üretilmektedir ve
+        yalnızca eğlence ve kişisel düşünme amaçlıdır. Bu içerikler tıbbi, psikolojik,
+        hukuki veya finansal tavsiye yerine geçmez. Yalnızca güneş burcuna dayalıdır;
+        yükselen burç veya ay burcu hesaplanmamaktadır.
+      </p>
+    </div>
+
+    <h2>Politika Değişiklikleri</h2>
+    <p>Bu politikayı güncelleyebiliriz. Önemli değişikliklerde uygulama içi bildirim
+    veya e-posta ile bilgilendiririz. Güncel versiyonu bu sayfada bulabilirsiniz.</p>
+
+    <div class="divider"></div>
+
+    <h2>İletişim</h2>
+    <div class="contact-box">
+      <p style="color:var(--muted); font-size:14px; margin-bottom:8px;">
+        Gizlilik ile ilgili sorularınız için
+      </p>
+      <div class="email">destek@neyora.app</div>
+    </div>
+
+  </div><!-- /block-tr -->
+
+  <!-- ═══════════════════════════════════════ ENGLISH ══════════════════════════════════════ -->
+  <div class="lang-block" id="block-en">
+
+    <h2>Introduction</h2>
+    <p>
+      Neyora ("app", "we", "us") is committed to protecting your personal data.
+      This Privacy Policy explains what data we collect when you use the Neyora app,
+      how we use it, and what rights you have.
+    </p>
+    <p>
+      This policy is prepared in accordance with the Turkish
+      <strong>Personal Data Protection Law (KVKK, Law No. 6698)</strong>
+      and applicable regulations.
+    </p>
+
+    <h2>Data We Collect</h2>
+
+    <h3>Account &amp; Profile Information</h3>
+    <table>
+      <tr><th>Data Type</th><th>Purpose</th><th>Third Party</th></tr>
+      <tr><td>Email address</td><td>Authentication</td><td>Firebase Auth (Google)</td></tr>
+      <tr><td>Name</td><td>Personalised content</td><td>—</td></tr>
+      <tr><td>Date of birth</td><td>Sun sign calculation</td><td>—</td></tr>
+      <tr><td>Birth city</td><td>AI guidance context</td><td>Google Gemini API</td></tr>
+      <tr><td>Relationship status</td><td>AI content personalisation</td><td>Google Gemini API</td></tr>
+    </table>
+
+    <h3>Usage Data</h3>
+    <table>
+      <tr><th>Data Type</th><th>Purpose</th></tr>
+      <tr><td>Chat messages</td><td>AI response generation and history display</td></tr>
+      <tr><td>Daily mood selections</td><td>Personalised daily guidance</td></tr>
+      <tr><td>Compatibility analysis reports</td><td>Storing and displaying results</td></tr>
+      <tr><td>Daily insights</td><td>Date-based content management</td></tr>
+      <tr><td>Usage streak</td><td>Engagement tracking</td></tr>
+    </table>
+
+    <h3>Subscription Data</h3>
+    <p>
+      Premium subscriptions are processed through the Apple App Store.
+      No card or payment information is transmitted to Neyora.
+      The RevenueCat SDK manages your subscription status (active/inactive, plan type)
+      and does not process payment details.
+    </p>
+
+    <div class="card">
+      <div class="card-title">Data We Do NOT Collect</div>
+      <p>Location (GPS), camera/microphone, contacts, photos, health data,
+      fingerprint / face data, advertising identifier (IDFA), browsing history.</p>
+    </div>
+
+    <h2>How We Use Your Data</h2>
+    <ul>
+      <li>To provide core app functionality (sign-in, personal content, chat)</li>
+      <li>To generate daily astrology insights and AI guidance</li>
+      <li>To verify subscription status and grant premium feature access</li>
+      <li>To improve app performance</li>
+    </ul>
+    <p>We <strong>do not use your data for advertising</strong>, sell it to third parties,
+    or share it for commercial purposes.</p>
+
+    <h2>Third-Party Services</h2>
+
+    <div class="card">
+      <div class="card-title">Firebase Authentication &amp; Cloud Firestore — Google LLC</div>
+      <p>Authentication and data storage. Your data is stored encrypted on Google's servers.
+      <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy ↗</a></p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Gemini API — Google LLC</div>
+      <p>Your chat messages and profile context (name, zodiac sign, birth city) are sent to
+      the Gemini API to generate AI responses. Per Google's API Terms of Service, this data
+      is not used for model training by default.
+      <a href="https://ai.google.dev/gemini-api/terms" target="_blank">Gemini API Terms ↗</a></p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">RevenueCat</div>
+      <p>Subscription management. RevenueCat processes your subscription status
+      (active/inactive, expiry date) and RevenueCat user identifier.
+      Payment information is managed by Apple and is not passed to RevenueCat.
+      <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy Policy ↗</a></p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Apple App Store</div>
+      <p>All purchases are processed through Apple's infrastructure.
+      <a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank">Apple Privacy Policy ↗</a></p>
+    </div>
+
+    <h2>Data Retention</h2>
+    <table>
+      <tr><th>Data</th><th>Retention Period</th></tr>
+      <tr><td>Account data</td><td>Until account is deleted</td></tr>
+      <tr><td>Chat history</td><td>Until account is deleted (last 30 messages displayed)</td></tr>
+      <tr><td>Daily mood data</td><td>Until account is deleted</td></tr>
+      <tr><td>Compatibility reports</td><td>Until account is deleted</td></tr>
+    </table>
+
+    <h2>Your Rights (KVKK Article 11)</h2>
+    <ul>
+      <li><strong>Access:</strong> Right to learn what data we process about you</li>
+      <li><strong>Correction:</strong> Right to request correction of inaccurate or incomplete data</li>
+      <li><strong>Deletion:</strong> Delete your account and data via Profile → Delete Account in the app</li>
+      <li><strong>Objection:</strong> Right to object to processing of your personal data</li>
+      <li><strong>Complaint:</strong> Right to file a complaint with the Turkish Personal Data Protection Authority (KVKK)</li>
+    </ul>
+    <p>For requests: <a href="mailto:destek@neyora.app">destek@neyora.app</a></p>
+
+    <h2>Children's Privacy</h2>
+    <p>Neyora is not directed at children under 13. If we become aware that a person
+    under 13 has submitted data, we will delete it promptly.</p>
+
+    <h2>AI Disclaimer</h2>
+    <div class="disclaimer">
+      <div class="disclaimer-label">✦ Important Notice</div>
+      <p>
+        All content in Neyora is generated by artificial intelligence and is provided
+        for entertainment and personal reflection purposes only. It does not constitute
+        medical, psychological, legal, or financial advice. Content is based on sun sign
+        only; rising sign and moon sign are not calculated.
+      </p>
+    </div>
+
+    <h2>Policy Changes</h2>
+    <p>We may update this policy. For significant changes we will notify you via
+    in-app notification or email. The current version is always available on this page.</p>
+
+    <div class="divider"></div>
+
+    <h2>Contact</h2>
+    <div class="contact-box">
+      <p style="color:var(--muted); font-size:14px; margin-bottom:8px;">
+        For privacy-related questions
+      </p>
+      <div class="email">destek@neyora.app</div>
+    </div>
+
+  </div><!-- /block-en -->
+
+</div><!-- /content -->
+
+<script>
+  function setLang(lang) {
+    document.getElementById('block-tr').classList.toggle('visible', lang === 'tr');
+    document.getElementById('block-en').classList.toggle('visible', lang === 'en');
+    document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('header-title').textContent =
+      lang === 'tr' ? 'Gizlilik Politikası' : 'Privacy Policy';
+    document.getElementById('header-updated').textContent =
+      lang === 'tr' ? 'Son güncelleme: 11 Haziran 2026' : 'Last updated: June 11, 2026';
+    document.documentElement.lang = lang;
+  }
+</script>
+
+</body>
+</html>
